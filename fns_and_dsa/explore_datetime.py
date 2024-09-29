@@ -5,15 +5,16 @@ def display_current_datetime():
     current_date = datetime.now()
 
     #fprmat the current date and time
-    formatted_date = current_date.strftime("%Y/%m/%d, %H:%M:%S")
+    formatted_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
     print(f"current date and time: {formatted_date}")
 
 def calculate_future_date(number_of_days):
     #calculate future date by adding days
-    future_date = datetime.now() + timedelta(days=number_of_days)
+    current_date = datetime.now()
+    future_date = current_date + timedelta(days=number_of_days)
 
     #fprmat the future date
-    formatted_future_date = future_date.strftime("%Y/%m/%d")
+    formatted_future_date = future_date.strftime("%Y-%m-%d")
     print(f"future date: {formatted_future_date}")
     
 def main():
